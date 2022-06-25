@@ -5,10 +5,7 @@ import { Task } from '../../task/entities/task.entity';
 @Entity('user_task')
 export class UserTaskEntity {
   @PrimaryColumn()
-  user_seq: number;
-
-  @PrimaryColumn()
-  task_seq: number;
+  seq: number;
 
   @ManyToOne(() => UserEntity, (user) => user.seq)
   user: UserEntity;

@@ -18,6 +18,6 @@ export class CategoryService {
   }
 
   findCategoryTask(category_seq: number, userId: number) {
-    return this.taskHistoryRepository.query('select * from task_history where seq=?;', [14]);
+    return this.taskHistoryRepository.query(`select * from task_history where user_seq=1;`);
   }
 }
