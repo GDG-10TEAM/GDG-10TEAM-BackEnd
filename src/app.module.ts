@@ -10,6 +10,7 @@ import { Task } from './task/entities/task.entity';
 import { Category } from 'category/entities/category.entity';
 import { TaskHistory } from 'task-history/entities/task-history.entity';
 import { UserModule } from 'user/user.module';
+import { UserTaskModule } from './user-task/user-task.module';
 
 @Module({
   imports: [
@@ -25,6 +26,7 @@ import { UserModule } from 'user/user.module';
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: Boolean(process.env.DATABASE_SYNCHRONIZE),
     }),
+    UserTaskModule,
   ],
   controllers: [AppController],
   providers: [AppService],
