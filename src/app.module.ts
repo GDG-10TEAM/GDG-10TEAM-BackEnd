@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
+import { UserTaskModule } from './user-task/user-task.module';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { ConfigModule } from '@nestjs/config';
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: Boolean(process.env.DATABASE_SYNCHRONIZE),
     }),
+    UserTaskModule,
   ],
   controllers: [AppController],
   providers: [AppService],
