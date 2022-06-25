@@ -1,9 +1,13 @@
 import { Injectable } from '@nestjs/common';
 import { CreateUserTaskDto } from './dto/create-user-task.dto';
 import { UpdateUserTaskDto } from './dto/update-user-task.dto';
+import { UserTaskEntity } from './entities/user-task.entity';
+import { Repository } from 'typeorm';
 
 @Injectable()
 export class UserTaskService {
+  // constructor(@Injectable(UserTaskEntity) private userTaskReposity: Repository<UserTaskEntity>) {}
+
   create(createUserTaskDto: CreateUserTaskDto) {
     return 'This action adds a new userTask';
   }

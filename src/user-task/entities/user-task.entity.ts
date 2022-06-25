@@ -7,11 +7,11 @@ export class UserTaskEntity {
   @PrimaryColumn()
   seq: number;
 
-  @ManyToOne(() => UserEntity, (user) => user.seq)
-  user: UserEntity;
+  @Column()
+  user_seq: number;
 
-  @ManyToOne(() => Task, (task) => task.seq)
-  task: Task;
+  @Column()
+  task_seq: number;
 
   @Column({ length: 20 })
   frequency: string;
