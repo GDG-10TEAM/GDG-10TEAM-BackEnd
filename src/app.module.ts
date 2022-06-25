@@ -3,12 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { TaskModule } from './task/task.module';
-import { CategoryModule } from './category/category.module';
-import { TaskHistoryModule } from './task-history/task-history.module';
-import { Task } from './task/entities/task.entity';
-import { Category } from 'category/entities/category.entity';
-import { TaskHistory } from 'task-history/entities/task-history.entity';
+import { UserTaskModule } from './user-task/user-task.module';
 
 @Module({
   imports: [
@@ -23,6 +18,7 @@ import { TaskHistory } from 'task-history/entities/task-history.entity';
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: Boolean(process.env.DATABASE_SYNCHRONIZE),
     }),
+    UserTaskModule,
   ],
   controllers: [AppController],
   providers: [AppService],
