@@ -9,7 +9,7 @@ async function bootstrap() {
       transform: true,
     }),
   );
-  await app.listen(9999);
+  await app.listen(10000);
 }
 
 bootstrap();
