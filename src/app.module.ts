@@ -9,9 +9,11 @@ import { TaskHistoryModule } from './task-history/task-history.module';
 import { Task } from './task/entities/task.entity';
 import { Category } from 'category/entities/category.entity';
 import { TaskHistory } from 'task-history/entities/task-history.entity';
+import { UserModule } from 'user/user.module';
 
 @Module({
   imports: [
+    UserModule,
     ConfigModule.forRoot(),
     TypeOrmModule.forRoot({
       type: 'mysql',

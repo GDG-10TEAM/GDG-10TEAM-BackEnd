@@ -18,13 +18,6 @@ export class CategoryService {
   }
 
   findCategoryTask(category_seq: number, userId: number) {
-    this.taskHistoryRepository
-      .createQueryBuilder('th')
-      .innerJoin('th.task_seq', 'task')
-      .getMany()
-      .then((result) => {
-        console.log(result);
-        return result;
-      });
+    return this.taskHistoryRepository.query('select * from task_history where seq=?;', [14]);
   }
 }

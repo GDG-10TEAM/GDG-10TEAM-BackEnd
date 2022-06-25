@@ -1,14 +1,16 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Task } from 'task/entities/task.entity';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
+import { UserEntity } from 'user/entities/user.entity';
 
 @Entity()
 export class TaskHistory {
   @PrimaryGeneratedColumn()
   seq: number;
 
-  @Column()
+  @ManyToOne(() => Task, (task) => task.seq)
   task_seq: number;
 
-  @Column()
+  @ManyToOne(() => UserEntity, (user) => user.seq)
   user_seq: number;
 
   @Column()
