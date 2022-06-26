@@ -45,3 +45,16 @@
 ### TaskHistory
 
 - **GET** taskHistory/:category_seq/user/:user_seq
+
+
+### 기술 스택
+
+<img width="792" alt="image" src="https://user-images.githubusercontent.com/72638829/175795435-aad401ed-dc55-458b-8ab7-5e5ac70f71c6.png">
+
+```
+Node.js
+Nest.js
+MySQL
+Typescript
+TypeOrm
+```
