@@ -12,23 +12,8 @@ export class UserTaskController {
     return this.userTaskService.findAll(userSeq);
   }
 
-  @Post()
-  create(@Body() createUserTaskDto: CreateUserTaskDto) {
-    return this.userTaskService.create(createUserTaskDto);
-  }
-
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.userTaskService.findOne(+id);
-  }
-
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateUserTaskDto: UpdateUserTaskDto) {
-    return this.userTaskService.update(+id, updateUserTaskDto);
-  }
-
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.userTaskService.remove(+id);
   }
 }
