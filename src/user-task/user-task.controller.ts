@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Req } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { UserTaskService } from './user-task.service';
 import { CreateUserTaskDto } from './dto/create-user-task.dto';
 import { UpdateUserTaskDto } from './dto/update-user-task.dto';
@@ -7,14 +7,9 @@ import { UpdateUserTaskDto } from './dto/update-user-task.dto';
 export class UserTaskController {
   constructor(private readonly userTaskService: UserTaskService) {}
 
-  // @Get(':userSeq')
-  // getList(@Param('userSeq') userSeq: string) {
-  //   return this.userTaskService.findAll(userSeq);
-  // }
   @Get(':userSeq')
-  getList(@Req() request: string) {
-    console.log(request);
-    return this.userTaskService.findAll('1');
+  getList(@Param('userSeq') userSeq: string) {
+    return this.userTaskService.findAll(userSeq);
   }
 
   @Post()

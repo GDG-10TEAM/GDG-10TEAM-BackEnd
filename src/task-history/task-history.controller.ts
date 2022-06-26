@@ -1,7 +1,5 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 import { TaskHistoryService } from './task-history.service';
-import { CreateTaskHistoryDto } from './dto/create-task-history.dto';
-import { UpdateTaskHistoryDto } from './dto/update-task-history.dto';
 
 @Controller('task-history')
 export class TaskHistoryController {
