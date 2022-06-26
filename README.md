@@ -2,6 +2,13 @@
 
 집생이 갓생이 되는 그날까지...
 
+
+<img width="399" alt="image" src="https://user-images.githubusercontent.com/72638829/175795225-cedd1bd3-9d00-417e-8562-db050082981d.png"><img width="402" alt="image" src="https://user-images.githubusercontent.com/72638829/175795332-8ba70701-400e-48b6-8572-6071c2fb23c6.png">
+<img width="402" alt="image" src="https://user-images.githubusercontent.com/72638829/175795282-320ef86d-4e9f-45e2-83d5-375b8ef3da7a.png">
+
+
+
+
 ## api 명세
 
 ### user
